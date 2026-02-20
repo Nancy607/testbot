@@ -223,7 +223,7 @@ async def send_terms_page(message: Message, state: FSMContext, page_num: int, ed
 @router.message(CommandStart())
 async def cmd_start(message: Message, state: FSMContext):
     await state.clear()
-    await message.answer("Добро пожаловать!\n Вы находитесь в тестовом режиме бота от команды «Дасти Ёрон». \n Здесь вы сможете легко и понятно изучить важные термины и узнать, как правильно действовать в непростых ситуациях.  ", reply_markup=MAIN_MENU_KEYBOARD)
+    await message.answer("Добро пожаловать!\n В наш телеграм бот. \n Здесь вы сможете легко и понятно изучить важные термины и узнать, как правильно действовать в непростых ситуациях.  ", reply_markup=MAIN_MENU_KEYBOARD)
 
 
 # ==========================================
@@ -433,4 +433,5 @@ if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
+
         print("Бот остановлен")
